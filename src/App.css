@@ -1,0 +1,49 @@
+.password-checker {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.password-input {
+  margin: 20px 0;
+}
+
+input {
+  padding: 8px;
+  margin-right: 10px;
+  width: 200px;
+}
+
+button {
+  padding: 8px 16px;
+  margin: 5px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.password-strength p {
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.poco-segura {
+  color: #ff4444;
+}
+
+.segura {
+  color: #ffbb33;
+}
+
+.muy-segura {
+  color: #00C851;
+}
