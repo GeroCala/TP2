@@ -5,4 +5,4 @@ Aplicacion de fortaleza de contraseñas
 
 ## Despliegue
 Esta página esta desplegada a través de Netlify, la url para acceder a ella es:
-[Password Stregth Checker](tp2passwordstrengthchecker.netlify.app) 
+[Password Stregth Checker](https://tp2passwordstrengthchecker.netlify.app) 
