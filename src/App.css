@@ -48,15 +48,15 @@ button:hover {
   margin: 20px 0;
 }
 
-.poco-segura {
+.not-safe {
   color: #ff4444;
 }
 
-.segura {
+.safe {
   color: #ffbb33;
 }
 
-.muy-segura {
+.very-safe {
   color: #00C851;
 }
 

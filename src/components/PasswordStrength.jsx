@@ -16,9 +16,9 @@ function PasswordStrength({ password }) {
     // Check for mixed case
     if (/[a-z]/.test(pwd) && /[A-Z]/.test(pwd)) score += 1
 
-    if (score <= 2) return 'Poco segura'
-    if (score <= 3) return 'Segura'
-    return 'Muy segura'
+    if (score <= 2) return 'Not Safe'
+    if (score <= 3) return 'Safe'
+    return 'Very Safe'
   }
 
   const strengthClass = checkStrength(password).toLowerCase().replace(' ', '-')
@@ -27,7 +27,7 @@ function PasswordStrength({ password }) {
     <div className="password-strength">
       {password && (
         <p className={strengthClass}>
-          Fortaleza: {checkStrength(password)}
+          State: {checkStrength(password)}
         </p>
       )}
     </div>
