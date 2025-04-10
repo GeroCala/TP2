@@ -4,8 +4,8 @@ function PasswordStrength({ password }) {
     
     let score = 0
     // Check length
-    if (pwd.length >= 8) score += 1
-    if (pwd.length >= 12) score += 1
+    if (pwd.length >= 6) score += 1
+    if (pwd.length >= 9) score += 1
     
     // Check for numbers
     if (/\d/.test(pwd)) score += 1

@@ -2,6 +2,19 @@ import { useState } from 'react'
 
 function PasswordInput({ password, onPasswordChange }) {
   const [showPassword, setShowPassword] = useState(false)
+  const [showCopyMessage, setShowCopyMessage] = useState(false)
+
+  const handleCopyPassword = async () => {
+    try {
+      await navigator.clipboard.writeText(password)
+      setShowCopyMessage(true)
+      setTimeout(() => {
+        setShowCopyMessage(false)
+      }, 2000)
+    } catch (err) {
+      console.error('Failed to copy password:', err)
+    }
+  }
 
   return (
     <div className="password-input">
@@ -11,9 +24,17 @@ function PasswordInput({ password, onPasswordChange }) {
         onChange={(e) => onPasswordChange(e.target.value)}
         placeholder="Enter your password"
       />
-      <button onClick={() => setShowPassword(!showPassword)}>
-        {showPassword ? "Hide" : "Show"} Password
-      </button>
+      <div className="button-group">
+        <button onClick={() => setShowPassword(!showPassword)}>
+          {showPassword ? "Hide" : "Show"} Password
+        </button>
+        <button onClick={handleCopyPassword}>
+          Copy Password
+        </button>
+      </div>
+      {showCopyMessage && (
+        <div className="copy-message">Password was copied!</div>
+      )}
     </div>
   )
 }

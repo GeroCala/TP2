@@ -17,6 +17,18 @@ input {
   width: 200px;
 }
 
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.button-group button {
+  flex: 1;
+  max-width: 150px;
+}
+
 button {
   padding: 8px 16px;
   margin: 5px;
@@ -46,4 +58,17 @@ button:hover {
 
 .muy-segura {
   color: #00C851;
+}
+
+.copy-message {
+  color: #4CAF50;
+  margin-top: 10px;
+  font-weight: bold;
+  animation: fadeOut 3s ease-in-out;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
 }
